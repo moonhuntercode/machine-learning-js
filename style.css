@@ -1,0 +1,54 @@
+:root {
+  --bg-color: #313131;
+  --text-color: #fff;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --one-hundred-percent: 100%;
+  --size-of-img: 50%;
+}
+/* start reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  width: var(--one-hundred-percent);
+  height: var(--one-hundred-percent);
+}
+/* end reset */
+body {
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+.tfjs-example-container {
+  /* height: 60vh; */
+  & img {
+    width: var(--size-of-img);
+    height: var(--size-of-img);
+  }
+}
+#predictions {
+  background: white;
+  color: black;
+  padding: 10px;
+  width: 50%;
+  display: block;
+  text-align: center;
+  text-indent: 20px;
+}
+input[type="file"] {
+  display: block;
+}
