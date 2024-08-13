@@ -9,9 +9,10 @@
   --info-color: #17a2b8;
   --light-color: #f8f9fa;
   --dark-color: #343a40;
-
+  --main-size: 300px;
   --one-hundred-percent: 100%;
-  --size-of-img: 50%;
+  --size-of-cat: 100%;
+  --border-radius: 30px;
 }
 /* start reset */
 *,
@@ -28,27 +29,57 @@ html {
 }
 /* end reset */
 body {
+  text-align: center;
   background-color: var(--bg-color);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   color: var(--text-color);
 }
 .tfjs-example-container {
-  /* height: 60vh; */
-  & img {
-    width: var(--size-of-img);
-    height: var(--size-of-img);
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  height: 90vh;
+
+  & #loaded-image {
+    img {
+      width: var(--size-of-cat);
+      height: var(--size-of-cat);
+    }
   }
 }
 #predictions {
   background: white;
   color: black;
   padding: 10px;
-  width: 50%;
+  width: var(--one-hundred-percent);
   display: block;
   text-align: center;
   text-indent: 20px;
+  /* border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius); */
 }
 input[type="file"] {
   display: block;
+  visibility: hidden;
+}
+.logos_container {
+  display: flex;
+  flex-flow: row wrap;
+  place-content: center;
+  gap: 2em;
+  width: var(--one-hundred-percent);
+}
+main#main_container_view {
+  overflow-y: scroll;
+  border-radius: var(--border-radius);
+  width: var(--main-size);
+  height: 90%;
+  background-color: blueviolet;
+}
+#file-container {
+  img {
+    cursor: pointer;
+    width: 100px;
+  }
 }

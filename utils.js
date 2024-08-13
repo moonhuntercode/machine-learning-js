@@ -25,14 +25,15 @@ export const handleFilePicker = (callback) => {
     let reader = new FileReader();
     reader.onload = (e) => {
       let img = document.createElement("img");
+      img.id="img-for-prediction";
       img.src = e.target.result;
-    //   img.width = IMAGE_SIZE;
-    //   img.height = IMAGE_SIZE;
+
+      //   img.width = IMAGE_SIZE;
+      //   img.height = IMAGE_SIZE;
       const loadedImgElement = document.getElementById("loaded-image");
       loadedImgElement.appendChild(img);
-      let loadedimg = img;
 
-      img.onload = () => callback(loadedimg);
+      img.onload = () => callback(img);
 
       // img.onload = () => predict(img);
     };
